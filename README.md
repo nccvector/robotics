@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Advance Filtering Robotics
 We are going to study some state of the art filters and their performance and behaviours in multiple scenarios. In the beginning, we are going to consider linear systems, which are of the form
 
@@ -514,3 +515,9 @@ The ones who are curious can explore the following topics meanwhile:
 - Switching Kalman Filters
 - Change point detection
 - Particle Filters
+=======
+# advance-filtering-methods-robotics
+A comprehensive guide to filtering methods used in the field of Robotics
+
+Open the Jupyter notebook to begin learning
+>>>>>>> f62ed6546958e3a96364e8587d5a78405575a624
