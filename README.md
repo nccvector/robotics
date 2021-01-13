@@ -1,3 +1,5 @@
+PLEASE OPEN THE JUPYTER NOTEBOOK ABOVE FOR PROPER EQUATION DISPLAY
+
 <<<<<<< HEAD
 ## Advance Filtering Robotics
 We are going to study some state of the art filters and their performance and behaviours in multiple scenarios. In the beginning, we are going to consider linear systems, which are of the form
