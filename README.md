@@ -1,1 +1,1 @@
-## A comprehensive gude to filtering and examples
+## A comprehensive guide to filtering and examples
