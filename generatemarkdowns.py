@@ -85,6 +85,26 @@ def AddHeaderToPost(postname, header):
         fp.writelines(lines)
 
 
+def AddDollarsAroundMatrices(postname):
+    # Append the post layout on top
+    with open(postname + '.md', "r+") as fp:
+        # Read lines list from file pointer
+        lines = fp.readlines()
+
+        for i, line in enumerate(lines):
+            if 'begin{matrix' in line or 'begin{array' in line:
+                lines.pop(i)
+                print('old: ' + line)
+                line = '$' + line[:line.rfind('\n')] + '$\n'
+                print('new: ' + line)
+                lines.insert(i, line)
+
+        # Move the read cursor back to the beginning
+        fp.seek(0)
+
+        # Write lines to file
+        fp.writelines(lines)
+
 if __name__ == '__main__':
     # Loop over all notebooks
     for notebookFilePath in glob.iglob(os.path.join(rootDir, '**/*.ipynb'), recursive=True):
@@ -125,6 +145,8 @@ if __name__ == '__main__':
 
         # Add header to post
         AddHeaderToPost(postname, header)
+
+        AddDollarsAroundMatrices(postname)
 
         # Remove notebooks if deploying static website for hosting (to make the site light-weight)
         if args.deploy:
